@@ -16,5 +16,43 @@
     </bean>
 
     <!-- 处理器 -->
-    <bean name="/hello" class="cn.zhenghongen.springmvc.controller.HelloWorldController"/>
+    <bean name="/helloWorld" class="cn.zhenghongen.springmvc.controller.HelloWorldController">
+        <!--强制请求方式类型 -->
+        <!--  <property name="supportedMethods" value="POST"></property>-->
+        <!--session同步-->
+        <!-- <property name="requireSession" value="true"></property>-->
+        <!--缓存时间-->
+        <!-- <property name="cacheSeconds" value="5"></property>-->
+    </bean>
+    <bean name="/helloWorldAbstract" class="cn.zhenghongen.springmvc.controller.HelloWorldAbstractController"/>
+    <bean name="/helloWorldWithoutReturnAbstract"
+          class="cn.zhenghongen.springmvc.controller.HelloWorldWithoutReturnModelAndViewAbstractController"/>
+    <bean name="/helloWorldLastModifiedAbstract"
+          class="cn.zhenghongen.springmvc.controller.HelloWorldLastModifiedAbstractController"/>
+    <!--命令控制器-->
+    <bean name="/abstractCommand" class="cn.zhenghongen.springmvc.controller.MyAbstractCommandController">
+        <!--也可以通过依赖注入  注入实现类-->
+        <!-- <property name="commandClass" value="cn.zhenghongen.springmvc.model.UserModel"></property>-->
+    </bean>
+    <!--表单控制器-->
+    <bean name="/simpleForm" class="cn.zhenghongen.springmvc.controller.RegisterSimpleFormController">
+       <property name="formView" value="register"></property>
+        <property name="successView" value="redirect:/success"></property>
+    </bean>
+   <!-- <bean name="/canCancelForm" class="cn.zhenghongen.springmvc.controller.RegisterCanCancelSimpleFormController">
+        <property name="formView" value="register"></property>
+        <property name="successView" value="redirect:/success"></property>
+        <property name="cancelView" value="redirect:/cancel"></property>
+    </bean>-->
+    <bean name="/success" class="cn.zhenghongen.springmvc.controller.SuccessController"></bean>
+    <bean name="/cancel" class="cn.zhenghongen.springmvc.controller.CancelController"></bean>
+    <bean name="/infoFillWizard" class="cn.zhenghongen.springmvc.controller.InfoFillWizardFormController">
+        <property name="pages">
+            <list>
+                <value>wizard/baseInfo</value>
+                <value>wizard/schoolInfo</value>
+                <value>wizard/workInfo</value>
+            </list>
+        </property>
+    </bean>
 </beans>
