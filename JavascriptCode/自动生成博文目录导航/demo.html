@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>使用HTML的锚点链接定位到具体的内容</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+        /*生成博客目录的CSS*/
+        #sideBar{
+            font-size:12px;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align:left;
+            position:fixed;/*将div的位置固定到距离top:50px，right:0px的位置，这样div就会处在最右边的位置，距离顶部50px*/
+            top:50px;
+            right:0px;
+            width: auto;
+            height: auto;
+        }
+        #sideBarTab{
+            float:left;
+            width:30px;
+            border:1px solid #e5e5e5;
+            border-right:none;
+            text-align:center;
+            background:#ffffff;
+        }
+
+        #sideBarContents{
+            float:left;
+            overflow:auto;
+            overflow-x:hidden;!important;
+            width:200px;
+            min-height:108px;
+            max-height:460px;
+            border:1px solid #e5e5e5;
+            border-right:none;
+            background:#ffffff;
+        }
+        #sideBarContents dl{
+            margin:0;
+            padding:0;
+        }
+
+        #sideBarContents dt{
+            margin-top:5px;
+            margin-left:5px;
+        }
+
+        #sideBarContents dd, dt {
+            cursor: pointer;
+        }
+
+        #sideBarContents dd:hover, dt:hover {
+            color:#A7995A;
+        }
+    </style>
+</head>
+<body>
+<div id="cnblogs_post_body">
+    <div style="background-color:Red; width:100%;height:150px;">
+        <!--经过测试发现，使用name的形式添加锚点在IE8和火狐下都不起作用，要设置Id才起作用
+    为了兼容，还是将name属性和id属性都一起写上，并且属性值设置成相同
+    -->
+        <h2 id="title0" name="title0">一、JAVA流式输入/输出原理</h2>
+    </div>
+    <div style="background-color:Yellow; width:100%;height:150px;">
+        <h2 name="title1" id="title1">二、输入输出流分类</h2>
+    </div>
+    <div style="background-color:Silver; width:100%;height:150px;">
+        <h2 name="title2" id="title2">三、节点流和处理流</h2>
+
+        <h3 name="title3" id="title3">3.1.节点流类型</h3>
+
+        <h3 name="title4" id="title4">3.2.处理流类型</h3>
+    </div>
+    <div style="background-color:Aqua; width:100%;height:150px;">
+        <h2 name="title5" id="title5">四、InputStream(输入流)</h2>
+
+        <h3 name="title6" id="title6">4.1.InputStream的基本方法</h3>
+    </div>
+    <div style="background-color:Fuchsia; width:100%;height:150px;">
+        <h2 name="title7" id="title7">五、OutputStream(输出流)</h2>
+
+        <h3 name="title8" id="title8">5.1.OutputStream的基本方法</h3>
+    </div>
+    <div style="background-color:Green; width:100%;height:150px;">
+        <h2 name="title9" id="title9">六、Reader流</h2>
+
+        <h3 name="title10" id="title10">6.1.Reader的基本方法</h3>
+    </div>
+    <div style="background-color:Blue; width:100%;height:150px;">
+        <h2 name="title11" id="title11">七、Writer流</h2>
+
+        <h3 name="title12" id="title12">7.1.Writer的基本方法</h3>
+    </div>
+    <div style="background-color:Olive; width:100%;height:150px;">
+        <h2 name="title13" id="title13">八、节点流讲解</h2>
+    </div>
+    <div style="background-color:Green; width:100%;height:150px;">
+        <h2 name="title14" id="title14">九、处理流讲解</h2>
+
+        <h3 name="title15" id="title15">9.1.第一种处理流——缓冲流(Buffering)</h3>
+
+        <h3 name="title16" id="title16">9.2.第二种处理流——转换流</h3>
+
+        <h3 name="title17" id="title17">9.3.第三种处理流——数据流</h3>
+
+        <h3 name="title18" id="title18">9.4.打印流——Print</h3>
+
+        <h3 name="title19" id="title19">9.5. 对象流——Object</h3>
+    </div>
+    <div style="background-color:Purple; width:100%;height:150px;">
+        <h2 name="title20" id="title20">十、IO流总结</h2>
+    </div>
+    <div style="height:130px;">&nbsp;</div>
+    <div style="height:130px;">&nbsp;</div>
+    <div style="height:130px;">&nbsp;</div>
+</div>
+<script src="blogDirectory.js"></script>
+</body>
+</html>
+
+
+
+
