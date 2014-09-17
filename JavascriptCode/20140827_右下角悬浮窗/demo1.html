@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JS右下角悬浮广告代码</title>
+</head>
+<body>
+<div style="position:absolute;border:1px solid #000;right:0;" id="ad">内容在这里</div>
+<script language="JavaScript" type="text/javascript">
+    function rightBottomAd() {
+        var abc = document.getElementById("ad");
+        abc.style.top = document.documentElement.scrollTop + document.documentElement.clientHeight - 20 + "px";
+        setTimeout(function () {
+            rightBottomAd();
+        }, 50);
+    }
+    rightBottomAd();
+</script>
+<table>
+    <tr>
+        <td height="1220">
+    </tr>
+</table>
+</body>
+</html>
